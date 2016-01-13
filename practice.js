@@ -193,24 +193,59 @@ beluga(whale);
 var dream = [true, "blue", "bbq", 2, "moo", "kungfu"];
 
 function american (array) {
-  var result = ('');
-  function fake (var i = 0; i < array.length; i++) {
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-  }
+  var result;
+  var i = Math.round(Math.random()*array.length);
+  result = array[i];
   console.log(result);
 }
-// Write a function that will take in a string and returns that same string in reverse.
 
+american(dream);
+// Write a function that will take in a string and returns that same string in reverse.
+var penguin = "bippity, boppity, boo"
+
+function emperor(string) { 
+  var result = string.split('').reverse().join('');
+  console.log(result);
+};
+
+emperor(penguin);
 // Write a JavaScript function that reverse a number e.g.
 
 // Example x = 32243;
 // Expected Output : 34223
-// Write a JavaScript function that takes in a string and returns it with letters in alphabetical order
+var gum = 23425667
+function chewing(number) { 
+  var result = Number(number.toString().split('').reverse().join(''));
+  console.log(result);
+};
 
+chewing(gum);
+// Write a JavaScript function that takes in a string and returns it with letters in alphabetical order
+var shark = "to bed i go"; 
+
+function greatWhite(string) {
+  var result = string.split('').sort().join('').trim();
+  console.log(result);
+}
+
+greatWhite(shark);
 // Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+
+var blossom = "french fries juniper do";
+
+function cherry (string) {
+  var result
+  var array = string.split(' ');
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].length > result.length) {
+      result = array[i];
+    } else {
+      
+    }
+    }
+  }
+  console.log(result);
+}
 
 // Example string = 'Web Development Tutorial'
 // Expected Output => 'Development'
