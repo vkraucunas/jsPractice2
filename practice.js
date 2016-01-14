@@ -174,7 +174,17 @@ function oHunt(string) {
 oHunt(special)
 
 // Write a function which accepts a number as input and inserts dashes (-) between every two numbers. For example if you accept 025468 the output should be 02-54-68
+var sugar = 231557245;
 
+function pourSome(num) {
+  var result = "";
+  for (var i=0; i < num.length; i++) {
+    result += (num[i].toString() + num[i+1].toString() + "-");
+  }
+  console.log(result);
+}
+
+pourSome(sugar);
 // Write a function to remove every item in an array that is not a number.
 var whale = ['blue', 23, true, 'sheep', 3, 9, 335];
 
@@ -190,12 +200,27 @@ function beluga (array) {
 
 beluga(whale);
 // Write a JavaScript function to get a random item from an array.
-var dream = [true, "blue", "bbq", 2, "moo", "kungfu"];
 
+// Comments by Dave Sudia
+//Declare a variable and assign to it an array with multiple
+//types of data, including a result, strings and a number.
+var dream = [true, "blue", "bbq", 2, "moo", "kungfu"];
+// Declare a function with the name 'american' that accepts one 
+//parameter called array. This function will get a random item from the array.
 function american (array) {
+//Declare a variable called 'result'. At the end we will log this variable to the
+//console to display our randomly chosen array item.
   var result;
+/*Declare a variable called 'i' and assign an equation to it.
+The equation generates a random number between 0 and 1 using the Math.random method, 
+and multiplies that number by the length of the array, then rounds the number up or down 
+depending on what follows the floating decimal using the Math.round method.
+This provides a random integer within the array length to be our random index location.*/
   var i = Math.round(Math.random()*array.length);
+//Assign to the variable 'result' the index position of the parameter 'array' that is at the 
+//current value of 'i'.
   result = array[i];
+//Log the variable 'result' to the console.
   console.log(result);
 }
 
@@ -234,30 +259,97 @@ greatWhite(shark);
 var blossom = "french fries juniper do";
 
 function cherry (string) {
-  var result
+  var result = " ";
   var array = string.split(' ');
   for (var i = 0; i < array.length; i++) {
     if (array[i].length > result.length) {
       result = array[i];
     } else {
-      
-    }
+      result = result;
     }
   }
   console.log(result);
 }
 
+cherry(blossom);
 // Example string = 'Web Development Tutorial'
 // Expected Output => 'Development'
+
 // Write a function to add up all the numbers in any given year. The year will be given as a string, the output should be a number. For example the input '1470' should give 12
+var birthday = "1987";
 
+function happy (string) {
+  var result = 0;
+  var array = string.split('');
+
+  for (var i = 0; i < array.length; i+=2) {
+
+    result += Number(array[i]) + Number(array[i+1]);
+  }
+  console.log(result);
+};
+
+happy(birthday);
+
+//Help from Ben to shorten and make more sustainable.
+function happy2 (string) {
+  var result = 0;
+  var array = string.split('');
+
+  for (var i = 0; i < array.length; i++) {
+    result += Number(array[i])
+  }
+
+  console.log(result);
+};
+
+happy2(birthday);
 // Write a function that will take in an array of full names, and only return the first name of each person. For example ['Bradley Bouley', 'Robert Hajek'] should return ['Bradley', 'Robert']
+var fullNames = ['James Gibson', 'Valerie Kraucunas', 'Ferdinand Kraucunas', 'Zoey Gibson'];
 
+function screw (array) {
+  function helper (array) {
+    return array.split(" ")[0]
+}
+  var result = fullNames.map(helper);
+  console.log(result)
+}
+
+screw(fullNames);
 // Write a JavaScript program which accepts a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+var phrasing = "This is how we get ants";
 
+function anyone (string) {
+  var result = "";
+  for (var i = 0; i<string.length; i++) {
+    if (string[i] === string[i].toLowerCase()) {
+      result += string[i].toUpperCase();
+    } else {
+      result += string[i].toLowerCase();
+    }
+  }
+  console.log(result);
+}
+
+anyone(phrasing);
 // Write a JavaScript function to merge two arrays and removes all duplicates elements. e.g.
 
-// var array1 = [1, 2, 3];
-// var array2 = [2, 30, 1];
-// console.log(merge_array(array1, array2));
-[3, 2, 30, 1]
+var array1 = [1, 2, 3];
+var array2 = [2, 30, 1];
+
+function boring (arrayOne, arrayTwo) {
+  var result = [];
+  var bugger = arrayOne.concat(arrayTwo);
+  var obj = {};
+
+  for (var i = 0; i < bugger.length; i++) {
+    obj[bugger[i]] = bugger[i];
+  }
+  for (var j in obj){
+    result.push(obj[j]);
+  }
+  console.log(result);
+}
+
+console.log(merge_array(array1, array2));
+// [3, 2, 30, 1]
