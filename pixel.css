@@ -4,3 +4,15 @@ div {
 	border: 1px solid gray;
 	display: inline-block;
 }
+
+h2 {
+  font-family: sans-serif;
+}
+
+.red {
+  background-color: turquoise;
+}
+
+.purple {
+  background-color: purple;
+}
